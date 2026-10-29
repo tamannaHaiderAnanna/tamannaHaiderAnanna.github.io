@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tamanna Haider</title>
-<meta name="description" content="Tamanna Haider — software engineer working on databases, schema evolution and LLM-generated SQL. MSc applicant, Fall 2027.">
+<meta name="description" content="Tamanna Haider — lead software engineer working on databases, schema evolution and LLM-generated SQL.">
 <meta name="theme-color" content="#0f172a">
 <meta property="og:title" content="Tamanna Haider">
-<meta property="og:description" content="Software engineer working on databases, schema evolution and LLM-generated SQL. MSc applicant, Fall 2027.">
+<meta property="og:description" content="Lead software engineer working on databases, schema evolution and LLM-generated SQL.">
 <meta property="og:image" content="https://tamannahaiderananna.github.io/photo.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='%235eead4'%3ETH%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -192,7 +192,7 @@
     <div>
       <img class="avatar" src="photo.jpg" alt="Tamanna Haider" width="88" height="88">
       <h1><a href="/">Tamanna Haider</a></h1>
-      <p class="title">Lead Software Engineer · MSc applicant, Fall 2027</p>
+      <p class="title">Lead Software Engineer</p>
       <p class="tagline">I build database-backed systems that keep money correct, and I study how AI-written SQL copes when a database changes.</p>
       <nav class="nav" aria-label="In-page jump links">
         <ul>
@@ -283,10 +283,9 @@
         <li>
           <div class="row">
             <div class="row-bg"></div>
-            <p class="row-date">2022 — Present</p>
+            <p class="row-date">Oct&nbsp;2025 — Present</p>
             <div class="row-body">
               <h3><a class="row-link" href="https://softifybd.com" target="_blank" rel="noreferrer noopener" aria-label="Lead Software Engineer at SoftifyBD (opens in a new tab)"><span class="hit"></span>Lead Software Engineer · SoftifyBD<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
-              <p class="kicker">Lead since Oct 2025 · Software Engineer, Jun 2022 – Sep 2025</p>
               <p class="desc">ISPDigital: a multi-tenant SaaS for internet service providers, with one database per tenant.</p>
               <ul class="points">
                 <li>Designed a ledger-based balance system that keeps reseller balances consistent under concurrent updates.</li>
@@ -295,13 +294,38 @@
                   without paying any level twice.</li>
                 <li>Found and fixed race conditions and transaction-boundary bugs in money-movement code.</li>
                 <li>Redesigned database schemas and migrated live data across every tenant database.</li>
-                <li>Added support for several credentials per online payment gateway (bKash, Nagad, SSLCommerz and others), and
-                  fixed webhook and redirect failures in live payment flows.</li>
-                <li>Moved slow router and SMS calls into retry-backed background jobs, and built messaging to an accounting
-                  microservice.</li>
+                <li>Integrated a new payment gateway (ShurjoPay), added support for several credentials per gateway (bKash, Nagad,
+                  SSLCommerz and others), and fixed webhook and redirect failures in live payment flows.</li>
+                <li>Reworked background processing: scheduled jobs on a dedicated Hangfire server kept alive by a second one, router
+                  and SMS calls moved into retry-backed jobs, and messaging to an accounting microservice.</li>
               </ul>
               <ul class="tags" aria-label="Technologies used">
                 <li>C#</li><li>ASP.NET Core</li><li>EF Core</li><li>SQL Server</li><li>RabbitMQ</li><li>Hangfire</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <div class="row-bg"></div>
+            <p class="row-date">Jun&nbsp;2022 — Sep&nbsp;2025</p>
+            <div class="row-body">
+              <h3><a class="row-link" href="https://softifybd.com" target="_blank" rel="noreferrer noopener" aria-label="Software Engineer at SoftifyBD (opens in a new tab)"><span class="hit"></span>Software Engineer · SoftifyBD<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
+              <p class="desc">The same product on its earlier ASP.NET MVC 5 platform, plus the APIs behind its mobile apps.</p>
+              <ul class="points">
+                <li>Built billing and wallet features for a reseller network: prepaid and postpaid fund credit, automatic renewals,
+                  daily bill collection and balance recalculation.</li>
+                <li>Built the REST APIs behind the company's mobile apps for administrators, resellers and their customers:
+                  dashboards, bill collection, transactions and support tickets.</li>
+                <li>Integrated online payments for resellers and their customers on web and mobile, including tokenized payments,
+                  webhook and PayBill notifications, processing fees and country-wise currencies.</li>
+                <li>Improved performance on large tenants: partitioned the customer transaction tables, rewrote slow screens with
+                  Dapper, and removed repeated database calls.</li>
+                <li>Automated recurring jobs (renewals, status schedules, router sync), and posted bills and sales invoices to the
+                  accounting system.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies used">
+                <li>C#</li><li>ASP.NET MVC 5</li><li>SQL Server</li><li>Dapper</li><li>REST APIs</li>
               </ul>
             </div>
           </div>
@@ -375,9 +399,7 @@
     </section>
 
     <footer>
-      <p>Written by hand in plain HTML and CSS and hosted on GitHub Pages. Layout inspired by
-        <a href="https://brittanychiang.com" target="_blank" rel="noreferrer noopener">Brittany Chiang</a>'s portfolio.
-        Text is set in Inter.</p>
+      <p>Built with plain HTML and CSS, hosted on GitHub Pages.</p>
     </footer>
   </main>
 </div>
