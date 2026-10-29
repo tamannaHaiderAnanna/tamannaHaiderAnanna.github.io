@@ -348,13 +348,18 @@
                 <li>Redesigned database schemas and migrated live data across every tenant database.</li>
                 <li>Proposed and oversaw the migration of ISPDigital from ASP.NET MVC 5 to ASP.NET Core on .NET 10, covering
                   401 entities, about 680 services and more than 70 controllers.</li>
+                <li>Oversaw the new multi-tenant accounting microservice: old accounting data is still read through the main unit
+                  of work, while a second unit of work sends every add, update, cancel, delete and read to the service.</li>
+                <li>Built the RabbitMQ link between the platform and the accounting service: an outbox in every tenant database, a
+                  MassTransit consumer that applies each message's tenant, and routing that picks each site's broker and sends
+                  callbacks back to the right SaaS server.</li>
                 <li>Integrated a new payment gateway (ShurjoPay), added support for several credentials per gateway (bKash, Nagad,
                   SSLCommerz and others), and fixed webhook and redirect failures in live payment flows.</li>
-                <li>Reworked background processing: scheduled jobs on a dedicated Hangfire server kept alive by a second one, router
-                  and SMS calls moved into retry-backed jobs, and messaging to an accounting microservice.</li>
+                <li>Reworked background processing: scheduled jobs on a dedicated Hangfire server kept alive by a second one, and
+                  router and SMS calls moved into retry-backed jobs.</li>
               </ul>
               <ul class="tags" aria-label="Technologies used">
-                <li>C#</li><li>ASP.NET Core</li><li>EF Core</li><li>SQL Server</li><li>RabbitMQ</li><li>Hangfire</li>
+                <li>C#</li><li>ASP.NET Core</li><li>EF Core</li><li>SQL Server</li><li>RabbitMQ</li><li>MassTransit</li><li>Hangfire</li>
               </ul>
             </div>
           </div>
