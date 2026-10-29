@@ -133,8 +133,6 @@
 
   .more { display: inline-flex; align-items: baseline; font-weight: 600; color: var(--heading); }
 
-  footer { max-width: 28rem; padding-bottom: 64px; font-size: 0.875rem; color: var(--muted); }
-  footer a { color: var(--text); font-weight: 500; }
 
   @media (min-width: 640px) {
     .row { grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 32px; }
@@ -195,9 +193,9 @@
       <nav class="nav" aria-label="In-page jump links">
         <ul>
           <li><a href="#about"><span class="ind"></span><span class="lbl">About</span></a></li>
-          <li><a href="#research"><span class="ind"></span><span class="lbl">Research</span></a></li>
-          <li><a href="#experience"><span class="ind"></span><span class="lbl">Experience</span></a></li>
-          <li><a href="#projects"><span class="ind"></span><span class="lbl">Projects</span></a></li>
+          <li><a href="#experience"><span class="ind"></span><span class="lbl">Professional Experience</span></a></li>
+          <li><a href="#research"><span class="ind"></span><span class="lbl">Ongoing Research</span></a></li>
+          <li><a href="#projects"><span class="ind"></span><span class="lbl">Academic Thesis and Projects</span></a></li>
           <li><a href="#education"><span class="ind"></span><span class="lbl">Education</span></a></li>
         </ul>
       </nav>
@@ -234,49 +232,8 @@
       </ul>
     </section>
 
-    <section id="research" aria-label="Research">
-      <div class="sec-head"><h2>Research</h2></div>
-      <ol class="list">
-        <li>
-          <div class="row">
-            <div class="row-bg"></div>
-            <p class="row-date">2026 — Present</p>
-            <div class="row-body">
-              <h3><a class="row-link" href="https://github.com/tamannaHaiderAnanna/Text_To_Sql" target="_blank" rel="noreferrer noopener" aria-label="SchemaShift on GitHub (opens in a new tab)"><span class="hit"></span>SchemaShift: can open LLMs fix an existing SQL query after the schema changes?<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
-              <p class="kicker">Independent research project</p>
-              <p class="desc">Databases change: columns are renamed, tables split, a "deleted" flag added. A query written for the
-                old schema then fails, or keeps running and silently returns wrong rows. I built 144 repair tasks from the
-                <a href="https://github.com/bird-bench/mini_dev" target="_blank" rel="noreferrer noopener">BIRD Mini-Dev</a>
-                benchmark under four kinds of schema change, with gold answers computed automatically, and tested 9 open models
-                (1.5B–16B parameters), each with and without a one-line hint.</p>
-              <table class="mini">
-                <thead><tr><th>Model</th><th class="num">Renamed</th><th class="num">Meaningless</th></tr></thead>
-                <tbody>
-                  <tr><td>Qwen2.5-Coder 14B</td><td class="num">100%</td><td class="num">79%</td></tr>
-                  <tr><td>Phi-4 14B</td><td class="num">97%</td><td class="num">67%</td></tr>
-                  <tr><td>Qwen2.5-Coder 7B</td><td class="num">95%</td><td class="num">21%</td></tr>
-                  <tr><td>DeepSeek-Coder-V2 16B</td><td class="num">92%</td><td class="num">10%</td></tr>
-                </tbody>
-              </table>
-              <p class="caption">Share of queries fixed when the same six columns get natural names
-                (<code>first_name</code> → <code>given_name</code>) or meaningless ones (<code>Attribute1</code>), without a hint.</p>
-              <ul class="points">
-                <li><strong>Silent errors go unnoticed.</strong> Without a hint, no model fixed more than 4 of the 18 soft-delete
-                  tasks where the old query still runs but returns wrong rows.</li>
-                <li><strong>Hints help general models, not SQL-specialised ones.</strong> Gemma 3 12B went from 0 to 15 of the 18;
-                  OmniSQL 7B stayed at 0.</li>
-              </ul>
-              <ul class="tags" aria-label="Tools used">
-                <li>Python</li><li>SQLite</li><li>sqlglot</li><li>Ollama</li><li>Google Colab</li><li>LLM evaluation</li>
-              </ul>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <section id="experience" aria-label="Work experience">
-      <div class="sec-head"><h2>Experience</h2></div>
+    <section id="experience" aria-label="Professional experience">
+      <div class="sec-head"><h2>Professional Experience</h2></div>
       <ol class="list">
         <li>
           <div class="row">
@@ -343,8 +300,49 @@
       -->
     </section>
 
-    <section id="projects" aria-label="Projects">
-      <div class="sec-head"><h2>Projects</h2></div>
+    <section id="research" aria-label="Ongoing research">
+      <div class="sec-head"><h2>Ongoing Research</h2></div>
+      <ol class="list">
+        <li>
+          <div class="row">
+            <div class="row-bg"></div>
+            <p class="row-date">2026 — Present</p>
+            <div class="row-body">
+              <h3><a class="row-link" href="https://github.com/tamannaHaiderAnanna/Text_To_Sql" target="_blank" rel="noreferrer noopener" aria-label="SchemaShift on GitHub (opens in a new tab)"><span class="hit"></span>SchemaShift: can open LLMs fix an existing SQL query after the schema changes?<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
+              <p class="kicker">Independent research project</p>
+              <p class="desc">Databases change: columns are renamed, tables split, a "deleted" flag added. A query written for the
+                old schema then fails, or keeps running and silently returns wrong rows. I built 144 repair tasks from the
+                <a href="https://github.com/bird-bench/mini_dev" target="_blank" rel="noreferrer noopener">BIRD Mini-Dev</a>
+                benchmark under four kinds of schema change, with gold answers computed automatically, and tested 9 open models
+                (1.5B–16B parameters), each with and without a one-line hint.</p>
+              <table class="mini">
+                <thead><tr><th>Model</th><th class="num">Renamed</th><th class="num">Meaningless</th></tr></thead>
+                <tbody>
+                  <tr><td>Qwen2.5-Coder 14B</td><td class="num">100%</td><td class="num">79%</td></tr>
+                  <tr><td>Phi-4 14B</td><td class="num">97%</td><td class="num">67%</td></tr>
+                  <tr><td>Qwen2.5-Coder 7B</td><td class="num">95%</td><td class="num">21%</td></tr>
+                  <tr><td>DeepSeek-Coder-V2 16B</td><td class="num">92%</td><td class="num">10%</td></tr>
+                </tbody>
+              </table>
+              <p class="caption">Share of queries fixed when the same six columns get natural names
+                (<code>first_name</code> → <code>given_name</code>) or meaningless ones (<code>Attribute1</code>), without a hint.</p>
+              <ul class="points">
+                <li><strong>Silent errors go unnoticed.</strong> Without a hint, no model fixed more than 4 of the 18 soft-delete
+                  tasks where the old query still runs but returns wrong rows.</li>
+                <li><strong>Hints help general models, not SQL-specialised ones.</strong> Gemma 3 12B went from 0 to 15 of the 18;
+                  OmniSQL 7B stayed at 0.</li>
+              </ul>
+              <ul class="tags" aria-label="Tools used">
+                <li>Python</li><li>SQLite</li><li>sqlglot</li><li>Ollama</li><li>Google Colab</li><li>LLM evaluation</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="projects" aria-label="Academic thesis and projects">
+      <div class="sec-head"><h2>Academic Thesis and Projects</h2></div>
       <ul class="list">
         <li>
           <div class="row">
@@ -352,7 +350,7 @@
             <div class="row-media"><img class="thumb" src="img/biography.jpg" alt="Home page of B.Biography with published biography cards" width="200" height="113" loading="lazy"></div>
             <div class="row-body">
               <h3>B.Biography</h3>
-              <p class="kicker">2022 project · private repository</p>
+              <p class="kicker">2022 project</p>
               <p class="desc">A site where people publish a CV-style biography and visitors browse them by category, with admin
                 pages that each role may or may not open. In 2026 I fixed its security and data bugs: role checks on every admin
                 page, salted PBKDF2 password hashes, safe photo uploads, one transaction per biography, and a sign-up check that
@@ -369,7 +367,7 @@
             <div class="row-media"><img class="thumb" src="img/ucms.jpg" alt="Class schedule page of the course management system" width="200" height="113" loading="lazy"></div>
             <div class="row-body">
               <h3><a class="row-link" href="https://github.com/tamannaHaiderAnanna/university_course_management" target="_blank" rel="noreferrer noopener" aria-label="University Course Management System on GitHub (opens in a new tab)"><span class="hit"></span>University Course Management System<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
-              <p class="kicker">2019 student project</p>
+              <p class="kicker">2019 academic project</p>
               <p class="desc">Courses, teachers, rooms and results. In 2026 I reproduced its concurrency bugs (double-booked rooms,
                 duplicate registration numbers) and fixed them with transactions and row locks.</p>
               <ul class="tags" aria-label="Technologies used">
@@ -384,7 +382,7 @@
             <div class="row-media"><img class="thumb" src="img/stock.jpg" alt="Stock out page of the stock management system" width="200" height="113" loading="lazy"></div>
             <div class="row-body">
               <h3><a class="row-link" href="https://github.com/tamannaHaiderAnanna/stock_management_system" target="_blank" rel="noreferrer noopener" aria-label="Stock Management System on GitHub (opens in a new tab)"><span class="hit"></span>Stock Management System<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
-              <p class="kicker">2018 student project</p>
+              <p class="kicker">2018 academic project</p>
               <p class="desc">Stock in, stock out and sales reports. In 2026 I fixed an oversell race that let stock go negative, by
                 making stock-out one transaction with a conditional decrement, and checked it with browser tests.</p>
               <ul class="tags" aria-label="Technologies used">
@@ -413,9 +411,6 @@
       </ol>
     </section>
 
-    <footer>
-      <p>Built with plain HTML and CSS, hosted on GitHub Pages.</p>
-    </footer>
   </main>
 </div>
 
