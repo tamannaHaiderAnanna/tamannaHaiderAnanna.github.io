@@ -151,7 +151,7 @@
     letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.5;
   }
   .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 14px 0 4px; max-width: 480px; }
-  .stats.single { grid-template-columns: minmax(0, 150px); }
+  .stats.pair { grid-template-columns: repeat(2, minmax(0, 150px)); }
   .stat { border: 1px solid rgba(148, 163, 184, 0.18); border-radius: 8px; padding: 10px 12px; }
   .stat-value { display: block; color: var(--heading); font-size: 1.375rem; font-weight: 600; line-height: 1.2; }
   .stat-label { display: block; margin-top: 3px; color: var(--muted); font-size: 0.75rem; line-height: 1.35; }
@@ -472,8 +472,9 @@
             <p class="row-date">2016 — 2020</p>
             <div class="row-body">
               <h3><a class="row-link" href="https://www.iiuc.ac.bd" target="_blank" rel="noreferrer noopener" aria-label="B.Sc. in Computer Science and Engineering, International Islamic University Chittagong (opens in a new tab)"><span class="hit"></span>B.Sc. in Computer Science and Engineering · International Islamic University Chittagong<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
-              <div class="stats single">
+              <div class="stats pair">
                 <div class="stat"><span class="stat-value">3.898</span><span class="stat-label">CGPA out of 4.00</span></div>
+                <div class="stat"><span class="stat-value">2nd</span><span class="stat-label">In a class of 42</span></div>
               </div>
             </div>
           </div>
