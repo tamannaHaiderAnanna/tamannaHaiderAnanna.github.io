@@ -345,9 +345,26 @@
       -->
     </section>
 
-    <section id="projects" aria-label="Student projects">
+    <section id="projects" aria-label="Projects">
       <div class="sec-head"><h2>Projects</h2></div>
       <ul class="list">
+        <li>
+          <div class="row">
+            <div class="row-bg"></div>
+            <div class="row-media"><img class="thumb" src="img/biography.jpg" alt="Home page of B.Biography with published biography cards" width="200" height="113" loading="lazy"></div>
+            <div class="row-body">
+              <h3>B.Biography</h3>
+              <p class="kicker">2022 project · private repository</p>
+              <p class="desc">A site where people publish a CV-style biography and visitors browse them by category, with admin
+                pages that each role may or may not open. In 2026 I fixed its security and data bugs: role checks on every admin
+                page, salted PBKDF2 password hashes, safe photo uploads, one transaction per biography, and a sign-up check that
+                holds under concurrent requests.</p>
+              <ul class="tags" aria-label="Technologies used">
+                <li>ASP.NET MVC 5</li><li>Entity Framework 6</li><li>SQL Server</li>
+              </ul>
+            </div>
+          </div>
+        </li>
         <li>
           <div class="row">
             <div class="row-bg"></div>
