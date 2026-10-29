@@ -145,6 +145,10 @@
     padding: 6px 10px; border: 1px solid rgba(94, 234, 212, 0.35); border-radius: 6px;
     background: rgba(45, 212, 191, 0.08); color: var(--heading); font-size: 0.875rem; font-weight: 500; line-height: 1.4;
   }
+  #about .actions-label {
+    margin: 0 0 10px; color: var(--muted); font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+  }
   .actions { display: flex; flex-wrap: wrap; gap: 10px; }
   .btn {
     display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 6px;
@@ -244,9 +248,9 @@
         <ul>
           <li><a href="#about"><span class="lbl"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>About</span></a></li>
           <li><a href="#experience"><span class="lbl"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>Professional Experience</span></a></li>
+          <li><a href="#education"><span class="lbl"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 9v6"/></svg>Education</span></a></li>
           <li><a href="#research"><span class="lbl"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7.5 15h9"/></svg>Ongoing Research</span></a></li>
           <li><a href="#projects"><span class="lbl"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 5h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></svg>Academic Thesis and Projects</span></a></li>
-          <li><a href="#education"><span class="lbl"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 9v6"/></svg>Education</span></a></li>
           <li><a href="#skills"><span class="lbl"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/></svg>Skills</span></a></li>
           <li><a href="#contact"><span class="lbl"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Contact</span></a></li>
         </ul>
@@ -259,7 +263,7 @@
       <li><a href="mailto:t.haideronu96@gmail.com" title="Email" aria-label="Email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
       </a></li>
-      <li><a href="https://www.linkedin.com/in/tamanna-haider" title="LinkedIn" aria-label="LinkedIn (opens in a new tab)" target="_blank" rel="noreferrer noopener">
+      <li><a href="https://www.linkedin.com/in/tamanna-haider-dev0622" title="LinkedIn" aria-label="LinkedIn (opens in a new tab)" target="_blank" rel="noreferrer noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
       </a></li>
     </ul>
@@ -287,8 +291,11 @@
           <li>Technical debt</li>
         </ul>
       </div>
+      <p class="actions-label">Get in touch</p>
       <div class="actions">
-        <a class="btn" href="mailto:t.haideronu96@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Get in touch</a>
+        <a class="btn" href="mailto:t.haideronu96@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+        <a class="btn" href="https://github.com/tamannaHaiderAnanna" target="_blank" rel="noreferrer noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/tamanna-haider-dev0622" target="_blank" rel="noreferrer noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
         <!-- Add when cv.pdf is in the repo:
         <a class="btn" href="cv.pdf" target="_blank" rel="noreferrer noopener">Download CV</a>
         -->
@@ -356,10 +363,10 @@
               <h3><a class="row-link" href="https://www.iiuc.ac.bd" target="_blank" rel="noreferrer noopener" aria-label="Teaching Assistant at International Islamic University Chittagong (opens in a new tab)"><span class="hit"></span>Teaching Assistant · International Islamic University Chittagong<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
               <p class="kicker">Department of Computer Science and Engineering</p>
               <ul class="points">
-                <li>Ran lab sessions: prepared the lab machines and materials, demonstrated the exercises, and helped students
-                  debug their programs and fix setup problems.</li>
                 <li>Evaluated lab assignments and practical reports for correctness, logic and efficiency, explained mistakes,
                   and helped conduct practical tests under the instructor's supervision.</li>
+                <li>Ran lab sessions: prepared the lab machines and materials, demonstrated the exercises, and helped students
+                  debug their programs and fix setup problems.</li>
               </ul>
               <ul class="tags" aria-label="Courses">
                 <li>Database Management</li><li>Structured Programming</li><li>Digital Logic Design</li><li>System Design Lab</li>
@@ -371,6 +378,25 @@
       <!-- Show when cv.pdf is added:
       <a class="more" href="cv.pdf" target="_blank" rel="noreferrer noopener">View full CV<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a>
       -->
+    </section>
+
+    <section id="education" aria-label="Education">
+      <div class="sec-head"><h2><span class="sec-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 9v6"/></svg></span>Education</h2></div>
+      <ol class="list">
+        <li>
+          <div class="row">
+            <div class="row-bg"></div>
+            <p class="row-date">2016 — 2020</p>
+            <div class="row-body">
+              <h3><a class="row-link" href="https://www.iiuc.ac.bd" target="_blank" rel="noreferrer noopener" aria-label="B.Sc. in Computer Science and Engineering, International Islamic University Chittagong (opens in a new tab)"><span class="hit"></span>B.Sc. in Computer Science and Engineering · International Islamic University Chittagong<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
+              <div class="stats pair">
+                <div class="stat"><span class="stat-value">3.898</span><span class="stat-label">CGPA out of 4.00</span></div>
+                <div class="stat"><span class="stat-value">2nd</span><span class="stat-label">In a class of 42</span></div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
     </section>
 
     <section id="research" aria-label="Ongoing research">
@@ -486,25 +512,6 @@
       <a class="more" href="https://github.com/tamannaHaiderAnanna?tab=repositories" target="_blank" rel="noreferrer noopener">All repositories on GitHub<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a>
     </section>
 
-    <section id="education" aria-label="Education">
-      <div class="sec-head"><h2><span class="sec-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 9v6"/></svg></span>Education</h2></div>
-      <ol class="list">
-        <li>
-          <div class="row">
-            <div class="row-bg"></div>
-            <p class="row-date">2016 — 2020</p>
-            <div class="row-body">
-              <h3><a class="row-link" href="https://www.iiuc.ac.bd" target="_blank" rel="noreferrer noopener" aria-label="B.Sc. in Computer Science and Engineering, International Islamic University Chittagong (opens in a new tab)"><span class="hit"></span>B.Sc. in Computer Science and Engineering · International Islamic University Chittagong<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
-              <div class="stats pair">
-                <div class="stat"><span class="stat-value">3.898</span><span class="stat-label">CGPA out of 4.00</span></div>
-                <div class="stat"><span class="stat-value">2nd</span><span class="stat-label">In a class of 42</span></div>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </section>
-
     <section id="skills" aria-label="Skills">
       <div class="sec-head"><h2><span class="sec-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/></svg></span>Skills</h2></div>
       <ul class="skill-groups">
@@ -522,7 +529,7 @@
       <p>I am glad to talk about research, databases and software engineering. Email is the quickest way to reach me.</p>
       <ul class="contact-list">
         <li><span class="k">Email</span><a href="mailto:t.haideronu96@gmail.com">t.haideronu96@gmail.com</a></li>
-        <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/tamanna-haider" target="_blank" rel="noreferrer noopener">linkedin.com/in/tamanna-haider</a></li>
+        <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/tamanna-haider-dev0622" target="_blank" rel="noreferrer noopener">linkedin.com/in/tamanna-haider-dev0622</a></li>
         <li><span class="k">GitHub</span><a href="https://github.com/tamannaHaiderAnanna" target="_blank" rel="noreferrer noopener">github.com/tamannaHaiderAnanna</a></li>
         <li><span class="k">Location</span><span>Dhaka, Bangladesh</span></li>
       </ul>
