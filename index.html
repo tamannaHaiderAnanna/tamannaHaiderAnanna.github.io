@@ -79,13 +79,23 @@
     background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   }
   .sec-head h2 {
-    display: flex; align-items: center; gap: 10px;
-    margin: 0; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--heading);
+    display: flex; align-items: center; gap: 12px;
+    margin: 0; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--accent);
+  }
+  .sec-head h2::after {
+    content: ""; flex: 1; min-width: 24px; height: 1px;
+    background: linear-gradient(to right, rgba(94, 234, 212, 0.45), rgba(94, 234, 212, 0));
   }
   .sec-icon {
     display: inline-flex; align-items: center; justify-content: center; flex: none;
-    width: 28px; height: 28px; border-radius: 50%; background: var(--accent-bg); color: var(--accent);
+    width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(94, 234, 212, 0.4);
+    background: var(--accent-bg); color: var(--accent);
+  }
+  .sec-icon .icon { width: 17px; height: 17px; }
+  @media (max-width: 639px) {
+    .sec-head h2 { font-size: 0.95rem; letter-spacing: 0.06em; }
+    .sec-head h2::after { display: none; }
   }
   #about p { margin: 0 0 16px; }
 
