@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tamanna Haider</title>
+<meta name="description" content="Tamanna Haider — software engineer working on databases, schema evolution and LLM-generated SQL. MSc applicant, Fall 2027.">
+<meta property="og:title" content="Tamanna Haider">
+<meta property="og:description" content="Software engineer working on databases, schema evolution and LLM-generated SQL. MSc applicant, Fall 2027.">
+<meta property="og:image" content="https://tamannahaiderananna.github.io/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --text: #1f2328; --muted: #59636e; --line: #e5e7eb;
+    --accent: #0b6bcb; --chip: #eef4fb; --card: #f8fafc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1419; --text: #e6edf3; --muted: #9aa5b1; --line: #2b333c;
+      --accent: #58a6ff; --chip: #16263a; --card: #151b22;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6; font-size: 16px;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 48px 16px 64px; }
+  header { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+  .photo {
+    width: 128px; height: 128px; border-radius: 50%; object-fit: cover;
+    border: 1px solid var(--line); background: var(--chip);
+  }
+  .intro { flex: 1; min-width: 260px; }
+  h1 { margin: 0; font-size: 2rem; line-height: 1.2; }
+  .role { margin: 6px 0 12px; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .links a {
+    text-decoration: none; color: var(--accent); border: 1px solid var(--line);
+    padding: 4px 12px; border-radius: 999px; font-size: 0.9rem;
+  }
+  .links a:hover { background: var(--chip); }
+  section { margin-top: 44px; }
+  h2 {
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); border-bottom: 1px solid var(--line);
+    padding-bottom: 6px; margin: 0 0 16px;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .chips li { background: var(--chip); padding: 4px 12px; border-radius: 999px; font-size: 0.9rem; }
+  .item { margin-bottom: 20px; }
+  .item-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .item-head strong { font-weight: 600; }
+  .date { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+  .sub { color: var(--muted); margin: 2px 0 8px; }
+  ul.points { margin: 6px 0 0; padding-left: 20px; }
+  ul.points li { margin-bottom: 4px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 10px; padding: 16px 18px; margin-bottom: 14px;
+  }
+  .card h3 { margin: 0 0 4px; font-size: 1.05rem; }
+  .card p { margin: 8px 0; }
+  .tag {
+    display: inline-block; font-size: 0.75rem; color: var(--accent);
+    border: 1px solid var(--accent); border-radius: 999px; padding: 0 8px; margin-left: 6px;
+    vertical-align: middle;
+  }
+  table.mini { border-collapse: collapse; width: 100%; max-width: 480px; margin: 12px 0 4px; font-size: 0.92rem; }
+  table.mini th, table.mini td { text-align: left; padding: 5px 10px 5px 0; border-bottom: 1px solid var(--line); }
+  table.mini th { color: var(--muted); font-weight: 500; }
+  table.mini .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .caption { color: var(--muted); font-size: 0.85rem; margin: 4px 0 12px; }
+  .more { font-weight: 500; }
+  a { color: var(--accent); }
+  code { font-size: 0.9em; }
+  footer { margin-top: 56px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img class="photo" src="photo.jpg" alt="Tamanna Haider">
+    <div class="intro">
+      <h1>Tamanna Haider</h1>
+      <p class="role">Software Engineer · Databases, schema evolution &amp; LLM-generated SQL · MSc applicant, Fall 2027</p>
+      <nav class="links">
+        <a href="mailto:t.haideronu96@gmail.com">Email</a>
+        <!-- <a href="cv.pdf">CV (PDF)</a> -->
+        <a href="https://github.com/tamannaHaiderAnanna">GitHub</a>
+        <!-- <a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>I am a software engineer with 4+ years of experience on ISPDigital, a multi-tenant SaaS for internet
+      service providers, with one database per tenant and up to 30,000+ subscribers per provider. My work centres
+      on the database: ledgers that keep money correct under concurrency, schema changes rolled out to every
+      tenant database, and reliable background processing.</p>
+    <p>I am applying for a thesis-based MSc for Fall 2027. I want to study how databases change over time, and how
+      to keep the software and AI tools that depend on them correct.</p>
+  </section>
+
+  <section>
+    <h2>Research Interests</h2>
+    <ul class="chips">
+      <li>Database schema evolution &amp; data migration</li>
+      <li>Reliability of LLM-generated SQL</li>
+      <li>Data consistency in database-backed systems</li>
+      <li>Software architecture &amp; technical debt</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Research</h2>
+    <div class="card">
+      <h3>SchemaShift: can open LLMs fix an existing SQL query after the schema changes? <span class="tag">pilot results</span></h3>
+      <p class="sub">Independent research · Oct 2026 – present · Python, SQLite, sqlglot, Ollama, Google Colab</p>
+      <p>Databases change: columns get renamed, tables are split, a "deleted" flag is added. A query written for
+        the old schema then fails, or keeps running and silently returns wrong rows. I built 144 repair tasks from
+        the <a href="https://github.com/bird-bench/mini_dev">BIRD Mini-Dev</a> benchmark under four kinds of schema
+        change, with gold answers computed automatically, and tested 9 open models (1.5B–16B parameters), each with
+        and without a one-line hint.</p>
+      <table class="mini">
+        <thead><tr><th>Model</th><th class="num">Renamed columns</th><th class="num">Meaningless names</th></tr></thead>
+        <tbody>
+          <tr><td>Qwen2.5-Coder 14B</td><td class="num">100%</td><td class="num">79%</td></tr>
+          <tr><td>Phi-4 14B</td><td class="num">97%</td><td class="num">67%</td></tr>
+          <tr><td>Qwen2.5-Coder 7B</td><td class="num">95%</td><td class="num">21%</td></tr>
+          <tr><td>DeepSeek-Coder-V2 16B</td><td class="num">92%</td><td class="num">10%</td></tr>
+        </tbody>
+      </table>
+      <p class="caption">Share of queries fixed when the same six columns get natural names
+        (<code>first_name</code> → <code>given_name</code>) or meaningless ones (<code>Attribute1</code>), without a hint.</p>
+      <ul class="points">
+        <li><strong>Silent errors go unnoticed.</strong> In 18 tasks the old query still runs but returns wrong rows
+          after a soft-delete flag is added. Without a hint, no model fixed more than 4 of them.</li>
+        <li><strong>Hints help general models, not SQL-specialised ones.</strong> Gemma 3 12B went from 0 to 15 of the
+          18; OmniSQL 7B stayed at 0.</li>
+      </ul>
+      <p><a class="more" href="https://github.com/tamannaHaiderAnanna/Text_To_Sql">Code, data and full results →</a></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="item">
+      <div class="item-head">
+        <strong>Software Engineer — SoftifyBD</strong>
+        <span class="date">2022 – Present</span>
+      </div>
+      <p class="sub">ISPDigital: multi-tenant SaaS for internet service providers (billing, online payments, network automation)</p>
+      <ul class="points">
+        <li>Designed a ledger-based balance system for a multi-level reseller network that keeps balances consistent under concurrent updates.</li>
+        <li>Built the money flow for a three-level sub-reseller hierarchy: each level pays its own cost when it funds the level below, each parent–child pair keeps its own owed account, and online payments are split along the chain without paying any level twice.</li>
+        <li>Found and fixed race conditions and transaction-boundary bugs in money-movement code.</li>
+        <li>Redesigned database schemas and migrated live data across every tenant database.</li>
+        <li>Added support for several credentials per online payment gateway (bKash, Nagad, SSLCommerz and others), and fixed webhook and redirect failures in live payment flows.</li>
+        <li>Moved slow router and SMS calls into retry-backed background jobs, and built messaging to an accounting microservice.</li>
+        <li>Designed a deployment tool for multiple SaaS servers, with backups, restore and safety checks.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Student Projects</h2>
+    <div class="item">
+      <div class="item-head">
+        <strong><a href="https://github.com/tamannaHaiderAnanna/university_course_management">University Course Management System</a></strong>
+        <span class="date">2019</span>
+      </div>
+      <p class="sub">ASP.NET MVC 5 · SQL Server</p>
+      <p>Course, teacher, room and result management. In 2026 I reproduced its concurrency bugs (double-booked rooms,
+        duplicate registration numbers) and fixed them with transactions and row locks.</p>
+    </div>
+    <div class="item">
+      <div class="item-head">
+        <strong><a href="https://github.com/tamannaHaiderAnanna/stock_management_system">Stock Management System</a></strong>
+        <span class="date">2018</span>
+      </div>
+      <p class="sub">ASP.NET Web Forms · SQL Server</p>
+      <p>Stock in, stock out and sales reports. In 2026 I fixed an oversell race that let stock go negative, by making
+        stock-out one transaction with a conditional decrement, and checked it with browser tests before and after.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="item">
+      <div class="item-head">
+        <strong>B.Sc.</strong>
+      </div>
+      <p class="sub">CGPA 3.89 / 4.00</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul class="chips">
+      <li>C#</li><li>SQL</li><li>Python</li><li>JavaScript</li>
+      <li>ASP.NET Core / .NET 10</li><li>Entity Framework Core</li><li>SQL Server</li>
+      <li>RabbitMQ</li><li>Hangfire</li><li>Git</li><li>LLM evaluation</li>
+    </ul>
+  </section>
+
+  <footer>Last updated October 2026</footer>
+</div>
+</body>
+</html>
