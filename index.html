@@ -142,6 +142,12 @@
     border: 2px solid rgba(226, 232, 240, 0.1); transition: border-color 0.15s;
   }
   .row:hover .thumb { border-color: rgba(226, 232, 240, 0.3); }
+  .demo { position: relative; z-index: 2; margin: 14px 0 4px; max-width: 560px; }
+  .demo video {
+    display: block; width: 100%; height: auto; border-radius: 6px; background: #0d2a45;
+    border: 1px solid rgba(226, 232, 240, 0.12);
+  }
+  .demo figcaption { margin-top: 6px; font-size: 0.75rem; color: var(--muted); }
 
   .more { display: inline-flex; align-items: baseline; font-weight: 600; color: var(--heading); }
 
@@ -339,24 +345,27 @@
             <div class="row-body">
               <h3><a class="row-link" href="https://softifybd.com" target="_blank" rel="noreferrer noopener" aria-label="Lead Engineer at SoftifyBD (opens in a new tab)"><span class="hit"></span>Lead Engineer · SoftifyBD<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a><span class="badge">Current</span></h3>
               <p class="desc">ISPDigital: a multi-tenant SaaS for internet service providers, with one database per tenant.</p>
+              <figure class="demo">
+                <video controls preload="none" playsinline width="1920" height="1080" poster="img/ispdigital-demo.jpg"
+                  aria-label="ISPDigital product walkthrough">
+                  <source src="video/ispdigital-demo.mp4" type="video/mp4">
+                  <a href="video/ispdigital-demo.mp4">Download the walkthrough video (MP4)</a>
+                </video>
+                <figcaption>Product walkthrough (2:21): the admin panel on the demo server, with test data. Silent, with captions.</figcaption>
+              </figure>
               <ul class="points">
-                <li>Designed a ledger-based balance system that keeps reseller balances consistent under concurrent updates.</li>
-                <li>Built the money flow for a three-level sub-reseller hierarchy: each level pays its own cost when it funds the
-                  level below, each parent–child pair keeps its own owed account, and online payments are split along the chain
-                  without paying any level twice.</li>
+                <li>Designed a ledger-based reseller balance system that stays consistent under concurrent updates.</li>
+                <li>Built the money flow for a three-level reseller hierarchy, splitting online payments along the chain without
+                  paying any level twice.</li>
                 <li>Found and fixed race conditions and transaction-boundary bugs in money-movement code.</li>
                 <li>Redesigned database schemas and migrated live data across every tenant database.</li>
-                <li>Proposed and oversaw the migration of ISPDigital from ASP.NET MVC 5 to ASP.NET Core on .NET 10, covering
-                  401 entities, about 680 services and more than 70 controllers.</li>
-                <li>Oversaw the new multi-tenant accounting microservice: old accounting data is still read through the main unit
-                  of work, while a second unit of work sends every add, update, cancel, delete and read to the service.</li>
-                <li>Built the RabbitMQ link between the platform and the accounting service: an outbox in every tenant database, a
-                  MassTransit consumer that applies each message's tenant, and routing that picks each site's broker and sends
-                  callbacks back to the right SaaS server.</li>
-                <li>Integrated a new payment gateway (ShurjoPay), added support for several credentials per gateway (bKash, Nagad,
-                  SSLCommerz and others), and fixed webhook and redirect failures in live payment flows.</li>
-                <li>Reworked background processing: scheduled jobs on a dedicated Hangfire server kept alive by a second one, and
-                  router and SMS calls moved into retry-backed jobs.</li>
+                <li>Proposed and oversaw the migration from ASP.NET MVC 5 to ASP.NET Core on .NET 10 (401 entities, about 680
+                  services, 70+ controllers).</li>
+                <li>Oversaw the new multi-tenant accounting microservice and built its RabbitMQ link: a per-tenant outbox, a
+                  tenant-aware MassTransit consumer, and callbacks routed to the right SaaS server.</li>
+                <li>Integrated ShurjoPay, added multiple credentials per gateway (bKash, Nagad, SSLCommerz and others), and fixed
+                  live webhook and redirect failures.</li>
+                <li>Moved scheduled jobs to a dedicated Hangfire server, and router and SMS calls to retry-backed jobs.</li>
               </ul>
               <ul class="tags" aria-label="Technologies used">
                 <li>C#</li><li>ASP.NET Core</li><li>EF Core</li><li>SQL Server</li><li>RabbitMQ</li><li>MassTransit</li><li>Hangfire</li>
@@ -372,16 +381,14 @@
               <h3><a class="row-link" href="https://softifybd.com" target="_blank" rel="noreferrer noopener" aria-label="Software Engineer at SoftifyBD (opens in a new tab)"><span class="hit"></span>Software Engineer · SoftifyBD<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
               <p class="desc">The same product on its earlier ASP.NET MVC 5 platform, plus the APIs behind its mobile apps.</p>
               <ul class="points">
-                <li>Built billing and wallet features for a reseller network: prepaid and postpaid fund credit, automatic renewals,
-                  daily bill collection and balance recalculation.</li>
-                <li>Built the REST APIs behind the company's mobile apps for administrators, resellers and their customers:
-                  dashboards, bill collection, transactions and support tickets.</li>
-                <li>Integrated online payments for resellers and their customers on web and mobile, including tokenized payments,
-                  webhook and PayBill notifications, processing fees and country-wise currencies.</li>
-                <li>Improved performance on large tenants: partitioned the customer transaction tables, rewrote slow screens with
-                  Dapper, and removed repeated database calls.</li>
-                <li>Automated recurring jobs (renewals, status schedules, router sync), and posted bills and sales invoices to the
-                  accounting system.</li>
+                <li>Built reseller billing and wallets: prepaid and postpaid credit, automatic renewals, daily bill collection and
+                  balance recalculation.</li>
+                <li>Built the REST APIs behind the mobile apps for administrators, resellers and customers.</li>
+                <li>Integrated online payments on web and mobile: tokenized payments, webhook and PayBill notifications,
+                  processing fees and per-country currencies.</li>
+                <li>Sped up large tenants: partitioned the transaction tables, rewrote slow screens with Dapper, and cut repeated
+                  database calls.</li>
+                <li>Automated recurring jobs (renewals, status schedules, router sync) and accounting postings.</li>
               </ul>
               <ul class="tags" aria-label="Technologies used">
                 <li>C#</li><li>ASP.NET MVC 5</li><li>SQL Server</li><li>Dapper</li><li>REST APIs</li>
@@ -395,10 +402,9 @@
             <p class="row-date">Jun&nbsp;2022 — Jul&nbsp;2022</p>
             <div class="row-body">
               <h3>B.Biography · Personal training project</h3>
-              <p class="desc">A site where people publish a CV-style biography and visitors browse them by category, with admin
-                pages that each role may or may not open. In 2026 I fixed its security and data bugs: role checks on every admin
-                page, salted PBKDF2 password hashes, safe photo uploads, one transaction per biography, and a sign-up check that
-                holds under concurrent requests.</p>
+              <p class="desc">A site for publishing CV-style biographies, with role-based admin pages. In 2026 I fixed its
+                security and data bugs: role checks, salted PBKDF2 password hashes, safe uploads, one transaction per biography
+                and a race-safe sign-up check.</p>
               <ul class="tags" aria-label="Technologies used">
                 <li>ASP.NET MVC 5</li><li>Entity Framework 6</li><li>SQL Server</li>
               </ul>
@@ -413,10 +419,8 @@
               <h3><a class="row-link" href="https://www.iiuc.ac.bd" target="_blank" rel="noreferrer noopener" aria-label="Teaching Assistant at International Islamic University Chittagong (opens in a new tab)"><span class="hit"></span>Teaching Assistant · International Islamic University Chittagong<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
               <p class="kicker">Department of Computer Science and Engineering</p>
               <ul class="points">
-                <li>Evaluated lab assignments and practical reports for correctness, logic and efficiency, explained mistakes,
-                  and helped conduct practical tests under the instructor's supervision.</li>
-                <li>Ran lab sessions: prepared the lab machines and materials, demonstrated the exercises, and helped students
-                  debug their programs and fix setup problems.</li>
+                <li>Evaluated lab assignments and reports, explained mistakes, and helped run practical tests.</li>
+                <li>Ran lab sessions: set up the machines, demonstrated exercises and helped students debug their programs.</li>
               </ul>
               <ul class="tags" aria-label="Courses">
                 <li>Database Management</li><li>Structured Programming</li><li>Digital Logic Design</li><li>System Design Lab</li>
@@ -459,11 +463,11 @@
             <div class="row-body">
               <h3><a class="row-link" href="https://github.com/tamannaHaiderAnanna/Text_To_Sql" target="_blank" rel="noreferrer noopener" aria-label="SchemaShift on GitHub (opens in a new tab)"><span class="hit"></span>SchemaShift: can open LLMs fix an existing SQL query after the schema changes?<svg class="arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg></a></h3>
               <p class="kicker">Independent research project<span class="badge">Pilot results</span></p>
-              <p class="desc">Databases change: columns are renamed, tables split, a "deleted" flag added. A query written for the
-                old schema then fails, or keeps running and silently returns wrong rows. I built 144 repair tasks from the
+              <p class="desc">When a schema changes (a renamed column, a split table, a new "deleted" flag), old queries fail
+                or silently return wrong rows. I built 144 repair tasks from the
                 <a href="https://github.com/bird-bench/mini_dev" target="_blank" rel="noreferrer noopener">BIRD Mini-Dev</a>
-                benchmark under four kinds of schema change, with gold answers computed automatically, and tested 9 open models
-                (1.5B–16B parameters), each with and without a one-line hint.</p>
+                benchmark under four kinds of change and tested 9 open models (1.5B–16B), each with and without a one-line
+                hint.</p>
               <div class="stats">
                 <div class="stat"><span class="stat-value">144</span><span class="stat-label">Repair tasks</span></div>
                 <div class="stat"><span class="stat-value">9</span><span class="stat-label">Open models</span></div>
